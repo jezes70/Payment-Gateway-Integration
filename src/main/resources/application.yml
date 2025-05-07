@@ -30,5 +30,5 @@ spring:
 
 app:
   jwt:
-    secret: your-very-secure-secret
+    secret: EOq6kdcXhxt5maFrGSG4g2EuDTwiUqa4A4ZRAJf3FGg=
     expirationMs: 86400000

@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.UUID;
 
 @Service
 //@RequiredArgsConstructor
@@ -39,6 +40,7 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(()-> new RuntimeException("Default role not found"));
 
         User user = User.builder()
+                .id(UUID.randomUUID().toString())
                 .username(dto.getUsername())
                 .email(dto.getEmail())
                 .password(passwordEncoder.encode(dto.getPassword()))

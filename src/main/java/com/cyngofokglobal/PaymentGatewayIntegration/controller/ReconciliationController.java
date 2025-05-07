@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/reconciliation")
-//@RequiredArgsConstructor
 public class ReconciliationController {
 
     private final ReconciliationService reconciliationService;

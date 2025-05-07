@@ -7,6 +7,7 @@ import com.cyngofokglobal.PaymentGatewayIntegration.dto.UserRegistrationDTO;
 import com.cyngofokglobal.PaymentGatewayIntegration.entity.Role;
 import com.cyngofokglobal.PaymentGatewayIntegration.entity.User;
 import com.cyngofokglobal.PaymentGatewayIntegration.enums.RoleType;
+import com.cyngofokglobal.PaymentGatewayIntegration.exception.UsernameNotFoundException;
 import com.cyngofokglobal.PaymentGatewayIntegration.repository.RoleRepository;
 import com.cyngofokglobal.PaymentGatewayIntegration.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -66,7 +67,7 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword()));
 
         User user = userRepository.findByUsername(dto.getUsername())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
         String token = jwtTokenProvider.generateToken(
                 user.getUsername(),

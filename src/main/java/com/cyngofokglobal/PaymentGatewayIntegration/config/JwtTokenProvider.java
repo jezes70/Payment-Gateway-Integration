@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
 import java.security.Key;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,9 +31,11 @@ public class JwtTokenProvider {
 
     private Key key;
 
+
     @PostConstruct
     public void init() {
-        this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
+        byte[] decodedKey = Base64.getDecoder().decode(jwtSecret);
+        this.key = Keys.hmacShaKeyFor(decodedKey);
     }
 
     public String generateToken(String username, List<String> roles) {
