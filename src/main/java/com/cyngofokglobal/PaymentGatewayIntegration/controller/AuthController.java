@@ -7,6 +7,7 @@ import com.cyngofokglobal.PaymentGatewayIntegration.dto.UserRegistrationDTO;
 import com.cyngofokglobal.PaymentGatewayIntegration.entity.Role;
 import com.cyngofokglobal.PaymentGatewayIntegration.entity.User;
 import com.cyngofokglobal.PaymentGatewayIntegration.enums.RoleType;
+import com.cyngofokglobal.PaymentGatewayIntegration.exception.RoleNotFoundException;
 import com.cyngofokglobal.PaymentGatewayIntegration.exception.UsernameNotFoundException;
 import com.cyngofokglobal.PaymentGatewayIntegration.repository.RoleRepository;
 import com.cyngofokglobal.PaymentGatewayIntegration.repository.UserRepository;
@@ -48,7 +49,7 @@ public class AuthController {
         }
 
         Role defaultRole = roleRepository.findByName(RoleType.CUSTOMER)
-                .orElseThrow(() -> new RuntimeException("Default role not found"));
+                .orElseThrow(() -> new RoleNotFoundException("Default role not found"));
 
         User user = User.builder()
                 .username(dto.getUsername())
