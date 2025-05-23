@@ -16,7 +16,6 @@ import java.util.Collections;
 import java.util.UUID;
 
 @Service
-//@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

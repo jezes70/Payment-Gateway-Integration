@@ -41,7 +41,6 @@ public class AuthController {
         this.passwordEncoder = passwordEncoder;
         this.jwtTokenProvider = jwtTokenProvider;
     }
-
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@Valid @RequestBody UserRegistrationDTO dto) {
         if (userRepository.existsByUsername(dto.getUsername())) {

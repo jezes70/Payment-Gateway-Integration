@@ -14,8 +14,6 @@ import java.util.Map;
 @Builder
 public class PaymentRequestDTO {
 
-    private String merchantId;
-
     private BigDecimal amount;
 
     private String currency;
@@ -25,6 +23,57 @@ public class PaymentRequestDTO {
     private PaymentMethod paymentMethod;
 
     private OrderDetails orderDetails;
+
+    private String merchantId;
+
+    public String getMerchantId() {
+        return merchantId;
+    }
+
+    public void setMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getCustomerCountry() {
+        return customerCountry;
+    }
+
+    public void setCustomerCountry(String customerCountry) {
+        this.customerCountry = customerCountry;
+    }
+
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public OrderDetails getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(OrderDetails orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
     @Setter
     @Getter
     @NoArgsConstructor
@@ -34,6 +83,24 @@ public class PaymentRequestDTO {
         private PaymentMethodType type;
 
         private Map<String, Object> details;
+
+        public PaymentMethodType getType() {
+            return type;
+        }
+
+        public void setType(PaymentMethodType type) {
+            this.type = type;
+        }
+
+        public Map<String, Object> getDetails() {
+            return details;
+        }
+
+        public void setDetails(Map<String, Object> details) {
+            this.details = details;
+        }
+
+
     }
     @Getter
     @Setter
@@ -41,9 +108,28 @@ public class PaymentRequestDTO {
     @AllArgsConstructor
     @Builder
     public static class OrderDetails {
+
         private String orderId;
 
         private List<OrderItemDTO> items;
+
+        public String getOrderId() {
+            return orderId;
+        }
+
+        public void setOrderId(String orderId) {
+            this.orderId = orderId;
+        }
+
+        public List<OrderItemDTO> getItems() {
+            return items;
+        }
+
+        public void setItems(List<OrderItemDTO> items) {
+            this.items = items;
+        }
+
+
 
     }
     @Setter
@@ -52,9 +138,34 @@ public class PaymentRequestDTO {
     @AllArgsConstructor
     @Builder
     public static class OrderItemDTO {
+
         private String itemId;
         private Integer quantity;
 
         private BigDecimal unitPrice;
+        public String getItemId() {
+            return itemId;
+        }
+
+        public void setItemId(String itemId) {
+            this.itemId = itemId;
+        }
+
+        public Integer getQuantity() {
+            return quantity;
+        }
+
+        public void setQuantity(Integer quantity) {
+            this.quantity = quantity;
+        }
+
+        public BigDecimal getUnitPrice() {
+            return unitPrice;
+        }
+
+        public void setUnitPrice(BigDecimal unitPrice) {
+            this.unitPrice = unitPrice;
+        }
+
     }
 }
