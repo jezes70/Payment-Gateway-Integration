@@ -70,7 +70,7 @@ src/
 
 * Java 17+
 * Maven 3.6+
-* PostgreSQL running locally (or update `application.properties`)
+* MySQL running locally (or update `application.properties`)
 
 ### Default Port
 
