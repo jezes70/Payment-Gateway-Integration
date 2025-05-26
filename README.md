@@ -1,5 +1,5 @@
 
-````
+````markdown
 # Payment Gateway Integration
 
 A robust and extensible Payment Gateway Integration API built with Spring Boot.  
@@ -7,7 +7,7 @@ This application supports routing, failover, reconciliation, and integrates with
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - JWT-based authentication (Login/Register)
 - Role-based access control (`ADMIN`, `MERCHANT`, `CUSTOMER`)
@@ -21,7 +21,7 @@ This application supports routing, failover, reconciliation, and integrates with
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```plaintext
 src/
@@ -40,7 +40,7 @@ src/
 
 ---
 
-## 📐 Architecture Diagram
+# 📐 Architecture Diagram
 
 ```plaintext
 +-------------+       HTTP w/ JWT      +---------------------+      PostgreSQL
@@ -60,12 +60,11 @@ src/
          +------------------+     +------------------+     +------------------+
          | Provider A (3%)  |     | Provider B (2.5%) |     | Provider C (1.8%)|
          +------------------+     +------------------+     +------------------+
-
 ```
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
 ### Prerequisites
 
@@ -90,7 +89,7 @@ Visit: `http://localhost:6666`
 
 ---
 
-## 🔐 Authentication
+# 🔐 Authentication
 
 * Register: `POST /api/auth/register`
 * Login: `POST /api/auth/login`
@@ -98,7 +97,7 @@ Visit: `http://localhost:6666`
 
 ---
 
-## 📊 Payment Routing Logic
+# 📊 Payment Routing Logic
 
 | Amount Range   | Primary Provider | Fee (%) |
 | -------------- | ---------------- | ------- |
@@ -116,7 +115,7 @@ Visit: `http://localhost:6666`
 
 ---
 
-## 📄 API Endpoints
+# 📄 API Endpoints
 
 ### Auth APIs
 
@@ -132,7 +131,7 @@ Visit: `http://localhost:6666`
 
 ---
 
-## 👥 Roles and Permissions
+# 👥 Roles and Permissions
 
 | Role     | Capabilities                       |
 | -------- | ---------------------------------- |
@@ -142,7 +141,7 @@ Visit: `http://localhost:6666`
 
 ---
 
-## 🧪 Testing
+# 🧪 Testing
 
 ```bash
 mvn test
@@ -150,7 +149,7 @@ mvn test
 
 ---
 
-## 🧱 Tech Stack
+# 🧱 Tech Stack
 
 * Spring Boot 3.x
 * Spring Security + JWT
@@ -162,7 +161,7 @@ mvn test
 
 ---
 
-## 📦 Future Improvements
+# 📦 Future Improvements
 
 * Integration with real external providers (e.g., Stripe, PayPal)
 * Admin dashboard with analytics
@@ -172,9 +171,8 @@ mvn test
 
 ---
 
-## 📃 License
+# 📃 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ```
-
