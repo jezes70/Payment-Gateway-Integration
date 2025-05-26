@@ -153,7 +153,7 @@ mvn test
 
 * Spring Boot 3.x
 * Spring Security + JWT
-* PostgreSQL
+* MySQL
 * JPA (Hibernate)
 * Maven
 * Java 17
