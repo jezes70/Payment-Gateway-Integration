@@ -80,7 +80,7 @@ The application runs on **port 6666** by default.
 ### Steps
 
 ```bash
-git clone https://github.com/yourusername/payment-gateway-integration.git
+git clone https://github.com/jezes70/payment-gateway-integration.git
 cd payment-gateway-integration
 mvn clean install
 mvn spring-boot:run
@@ -177,6 +177,4 @@ mvn test
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ```
-
----
 
