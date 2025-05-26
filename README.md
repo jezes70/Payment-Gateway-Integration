@@ -23,7 +23,7 @@ This application supports routing, failover, reconciliation, and integrates with
 
 # 📁 Project Structure
 
-```
+```plaintext
 src/
 ├── config/              # Security, JWT, application configs
 ├── controller/          # REST API endpoints
@@ -170,6 +170,7 @@ mvn test
 * Caching & Realtime analytics via Redis
 
 ---
+
 # 📃 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
