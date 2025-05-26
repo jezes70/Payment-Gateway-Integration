@@ -1,10 +1,5 @@
-Perfect — I've added the **default port 6666** where the app runs.
 
-Here’s your **final version** of the `README.md` — now including the port:
-
----
-
-````markdown
+````
 # Payment Gateway Integration
 
 A robust and extensible Payment Gateway Integration API built with Spring Boot.  
